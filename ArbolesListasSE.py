@@ -2,13 +2,17 @@
 class Nodo:
 	def __init__(self, data):
 		self.data = data
+		self.anterior = None
 		self.siguiente = None
+		self.hijos = None
 
 # CLase Listas enlazada simple
 class ListaSE:
 	def __init__(self):
 		self.cabeza = None
-		
+		self.final = None
+  
+  
 	# Lista Vacia
 	def vacio(self):
 		if self.cabeza == None:
@@ -29,7 +33,30 @@ class ListaSE:
 			self.cabeza = nuevo_nodo
 			
 
-a = ListaSE() #raiz
+Nivel1 = ListaSE()
+Nivel2 = ListaSE()
+Nivel3 = ListaSE()
+
+#Creo la raiz del arbol
+Nivel1.agregarInicio(1)
+
+#Agrego el segundo nivel
+Nodo_a = Nivel1.cabeza
+Nodo_a.hijos = Nivel2
+Nivel2.agregarInicio(4)
+Nivel2.agregarInicio(3)
+Nivel2.agregarInicio(2)
+
+#Agrego el tercer nivel
+Nodo_a = Nivel2.cabeza
+Nodo_a.hijos = Nivel3
+Nivel3.agregarInicio(5)
+
+
+
+
+
+"""a = ListaSE() #raiz
 b = ListaSE() 
 c = ListaSE() 
 d = ListaSE() #hoja
@@ -43,5 +70,5 @@ b.agregarInicio(d)
 c.agregarInicio(f)
 
 a.agregarInicio(c)
-a.agregarInicio(b)
+a.agregarInicio(b)"""
 
