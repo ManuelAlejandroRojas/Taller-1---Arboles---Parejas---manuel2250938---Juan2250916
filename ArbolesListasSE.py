@@ -31,6 +31,18 @@ class ListaSE:
 		else:
 			nuevo_nodo.siguiente = self.cabeza
 			self.cabeza = nuevo_nodo
+   
+   
+# Crear arbol
+print("Para crear un arbol, ingrese el número de nodos maximos que puede tener el arbol:")
+maximo = int(input("Orden del arbol: "))
+
+print("Para crear un arbol, ingrese el número de nodos maximos que puede tener el arbol:")
+
+
+print("Ingrese el nodo a agregar:")
+nodo = int(input())
+
 			
 
 Nivel1 = ListaSE()
